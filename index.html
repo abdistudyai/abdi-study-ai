@@ -1,1 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study AI</title>
+</head>
 
+<body>
+  <h1>Study AI</h1>
+  <p>Your AI study assistant.</p>
+
+  <input
+    type="text"
+    id="question"
+    placeholder="Ask a question..."
+  >
+
+  <button onclick="askAI()">Ask AI</button>
+
+  <div id="answer"></div>
+
+  <script>
+    function askAI() {
+      const question = document.getElementById("question").value;
+      const answer = document.getElementById("answer");
+
+      if (question.trim() === "") {
+        answer.innerHTML = "Please enter a question.";
+        return;
+      }
+
+      answer.innerHTML =
+        "Your question has been received: " + question;
+    }
+  </script>
+</body>
+</html>
